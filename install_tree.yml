@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Install the git package on
+      apt:
+        name: tree
+        state: present
+    - name: check the package version
+      command: 'tree --version'
